@@ -7,8 +7,8 @@ This Vagrant setup makes it fast & easy for you to get started making your Rails
 Usage
 -----
 
-    $ git clone git@github.com:santos-bt/rails-4-vagrant.git
-    $ cd rails-4-vagrant
+    $ git clone git@github.com:seanfcarroll/rails-4-vagrant.git <new_appname>
+    $ cd <new_appname>
     $ vagrant up
     $ vagrant ssh
     $ cd /vagrant/rails-4-app
