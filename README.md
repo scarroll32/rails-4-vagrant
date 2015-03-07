@@ -7,8 +7,8 @@ This Vagrant setup makes it fast & easy for you to get started making your Rails
 Usage
 -----
 <pre>
-    $ git clone git@github.com:seanfcarroll/rails-4-vagrant.git <new_appname>
-    $ cd <new_appname>
+    $ git clone git@github.com:seanfcarroll/rails-4-vagrant.git (new_app_root)
+    $ cd (new_app_root)
     $ vagrant up
     $ vagrant ssh
 </pre>
@@ -25,16 +25,16 @@ Set up project owner account
 Become root password: vagrant
 <pre>
 $ su - root 
-$ adduser <user>
+$ adduser (user)
 
 
 $ visudo
 
-Add user <user> under root then cntrl+x to save
+Add user (user) under root then cntrl+x to save
 <pre>
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
-<user>   ALL=(ALL:ALL) ALL
+(user)   ALL=(ALL:ALL) ALL
 </pre>
 
 
@@ -42,7 +42,9 @@ root    ALL=(ALL:ALL) ALL
 su - assay
 sudo apt-get update
 sudo apt-get install curl
-rails new <appname>
+rails new (appname)
+cd (appname)
+bundle
 </pre>
     
  
