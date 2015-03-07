@@ -11,6 +11,14 @@ Usage
     $ cd <new_appname>
     $ vagrant up
     $ vagrant ssh
+    
+    $ sudo apt-get --purge remove ruby-rvm
+    $ sudo rm -rf /usr/share/ruby-rvm /etc/rvmrc /etc/profile.d/rvm.sh
+    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    $ \curl -L https://get.rvm.io | bash -s stable --ruby --autolibs=enable --auto-dotfiles
+    
+    $ 
+    
     $ cd /vagrant/rails-4-app
     $ rails s
 
