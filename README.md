@@ -6,25 +6,46 @@ This Vagrant setup makes it fast & easy for you to get started making your Rails
 
 Usage
 -----
-
+<pre>
     $ git clone git@github.com:seanfcarroll/rails-4-vagrant.git <new_appname>
     $ cd <new_appname>
     $ vagrant up
     $ vagrant ssh
-    
+</pre>
+
+Install RVM
+<pre>
     $ sudo apt-get --purge remove ruby-rvm
     $ sudo rm -rf /usr/share/ruby-rvm /etc/rvmrc /etc/profile.d/rvm.sh
     $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     $ \curl -L https://get.rvm.io | bash -s stable --ruby --autolibs=enable --auto-dotfiles
-    
-    $ 
-    
-    $ cd /vagrant/rails-4-app
-    $ rails s
+</pre>
 
-You can now view your application in [http://localhost:8300/](http://localhost:8300/).  
-The source code for your application is in the `rails-4-app` folder; you can edit it there.  
+Set up project owner account
+Become root password: vagrant
+<pre>
+$ su - root 
+$ adduser <user>
 
+
+$ visudo
+
+Add user <user> under root then cntrl+x to save
+<pre>
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+<user>   ALL=(ALL:ALL) ALL
+</pre>
+
+
+<pre>
+su - assay
+sudo apt-get update
+sudo apt-get install curl
+rails new <appname>
+</pre>
+    
+ 
 
 Requires
 --------
