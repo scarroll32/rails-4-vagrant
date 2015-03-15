@@ -26,10 +26,12 @@ Become root password: vagrant
 <pre>
 $ su - root 
 $ adduser (user)
+</pre>
 
-
+Set up new user as a sudoer
+<pre>
 $ visudo
-
+</pre>
 Add user (user) under root then cntrl+x to save
 <pre>
 # User privilege specification
@@ -37,7 +39,7 @@ root    ALL=(ALL:ALL) ALL
 (user)   ALL=(ALL:ALL) ALL
 </pre>
 
-
+Update OS and install rails
 <pre>
 su - assay
 sudo apt-get update
